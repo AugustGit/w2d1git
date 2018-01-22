@@ -8,6 +8,7 @@ var requestOptions = {
 };
 
 function printHTML (html) {
+  var htmlreg = html
   console.log(html);
 }
 
