@@ -1,5 +1,5 @@
 var https = require('https');
-var buf = new Buffer(1024);
+//var buf = new Buffer(1024);
 
 function getAndPrintHTML () {
 
