@@ -3,17 +3,17 @@ var https = require('https');
 function getAndPrintHTMLChunks() {
 
   var requestOptions = {
-    host:'sytantris.github.io',
-    path: 'http-examples/step1.html'
+    host: 'sytantris.github.io',
+    path: '/http-examples/step1.html'
   };
 
   /* add code */
-https.get(requestOptions, function (response) {
+  https.get(requestOptions, function (response) {
 
   response.setEncoding('utf8');
 
   response.on('data', function (data) {
-    console.log('Chunk Received. Length',data , '\n' , data.length);
+    console.log('Chunk Received. Length', data + '\n' , data.length);
   });
 
   response.on('end', function() {
@@ -21,5 +21,6 @@ https.get(requestOptions, function (response) {
   });
 
 });
-
 }
+
+getAndPrintHTMLChunks()
