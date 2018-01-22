@@ -1,6 +1,7 @@
-var https = require('https');
+
 
 function getAndPrintHTML (options) {
+var https = require('https');
 
 https.get(options, function (response) {
 
